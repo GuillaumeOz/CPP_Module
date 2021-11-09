@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/11/08 15:30:21 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/11/09 16:23:10 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	facebook
+NAME		=	Bookphone
 
 CC			=	clang++
 
@@ -26,7 +26,7 @@ OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 
 # Compilation flags
 
-CFLAGS		=	-Wall -Wextra -Werror #-fsanitize=address -g3
+CFLAGS		=	-Wall -Wextra -Werror -fsanitize=address -g3
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I $(dir))
 

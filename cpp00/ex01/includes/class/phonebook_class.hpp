@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   facebook.hpp                                       :+:      :+:    :+:   */
+/*   Phonebook_class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:14:38 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/08 20:44:25 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/09 16:17:11 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FACEBOOK_HPP
-# define FACEBOOK_HPP
+#ifndef PHONEBOOK_CLASS_HPP
+# define PHONEBOOK_CLASS_HPP
 
-# include <iostream>
-# include <iomanip>
-# include <stdio.h>
-# include <string.h>
-# include "facebook_class.hpp"
+class Phonebook
+{
+	public :
 
-# define DEBUG std::cerr << "ICI" << std::endl;
-# define PRINTS(x) std::cerr << x << std::endl;
-# define PRINTD(x) std::cerr << x << std::endl;
-# define PRINTC(x) std::cerr << x << std::endl;
+// first name, last name, nickname,
+// phone number,darkest secret.
+
+	Phonebook(void);
+	~Phonebook(void);
+
+	void		add(int i);
+	void		format_print(void);
+	void		search_users(void) const;
+	void		search_user(void) const;
+
+	int			index;
+	std::string first_name;
+	std::string last_name;
+	std::string nickname;
+	std::string phone_number;
+	std::string darkest_secret;
+	std::string user;//remove this ?
+
+	static int	get_nb_inst(void);
+
+	private :
+
+	static int	_nb_inst;
+};
 
 #endif
