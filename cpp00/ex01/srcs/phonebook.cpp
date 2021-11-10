@@ -41,10 +41,9 @@ static void	search(Phonebook *users, int total_inst)
 	std::cout << std::setfill (' ') << std::setw (10);
 	std::cout << "Nickname" << std::endl;
 	if (total_inst > 7)
-		total_inst = 7;// this is usefull ?
+		total_inst = 8;
 	while (i < total_inst)
 	{
-		//index, first name, last name and nickname.
 		(users[i]).search_users();
 		i++;
 	}
@@ -68,25 +67,28 @@ int	main()
 	Phonebook	users[8];
 	std::string	input;
 	int			i;
+	int			j;
 
 	i = 0;
+	j = 0;
 	phonebook_usage();
 	while (std::getline(std::cin, input))
 	{
-		if (i == 7)//remplace by get_nb_inst ?
-		{
-			i = 0;
-			std::cout << "You have exceeded the limit of 8 users" << std::endl;
-			std::cout << "Next ADD will remove user " << i << std::endl;
-			std::cout << std::endl;
-		}
 		if ((input.compare("EXIT")) == 0)
 			return (0);
-		else if (input.compare("ADD") == 0)
+		if (i >= 8)
 		{
-			users[i].add(i);
+			j = i % 8;
+			std::cout << "You have exceeded the limit of 8 users" << std::endl;
+			std::cout << "Next ADD will remove user " << j << std::endl;
+			std::cout << std::endl;
+		}
+		if (input.compare("ADD") == 0)
+		{
+			users[j].add(j);
 			phonebook_usage();
 			i++;
+			j = i % 8;
 		}
 		else if (input.compare("SEARCH") == 0)
 			search(users, i);
