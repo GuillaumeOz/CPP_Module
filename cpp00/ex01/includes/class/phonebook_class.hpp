@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook_class.hpp                                 :+:      :+:    :+:   */
+/*   phonebook_class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:14:38 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/09 16:17:11 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:17:33 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 class Phonebook
 {
 	public :
-
-// first name, last name, nickname,
-// phone number,darkest secret.
 
 	Phonebook(void);
 	~Phonebook(void);
@@ -34,7 +31,7 @@ class Phonebook
 	std::string nickname;
 	std::string phone_number;
 	std::string darkest_secret;
-	std::string user;//remove this ?
+	std::string user;
 
 	static int	get_nb_inst(void);
 

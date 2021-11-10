@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook_class.cpp                                 :+:      :+:    :+:   */
+/*   phonebook_class.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:12:08 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/09 16:15:11 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/10 20:17:18 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		Phonebook::get_nb_inst(void)
 void	Phonebook::add(int i)
 {
 	std::cout << "Follow the next steps for creating new user" << std::endl;
-	Phonebook::index = i;//segfault with ctrl d
+	Phonebook::index = i;
 	std::cout << "Enter a first name" << std::endl;
 	std::getline(std::cin, this->first_name);
 	std::cout << "Enter a last name" << std::endl;
