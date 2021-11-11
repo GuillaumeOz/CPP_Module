@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:12:08 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/10 20:17:18 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/11 20:56:49 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,9 @@ void	Phonebook::search_user(void) const
 	std::cout << "Last name : " << this->last_name << std::endl;
 	std::cout << "Phone number : " << this->phone_number << std::endl;
 	std::cout << "Darkest_secret : " << this->darkest_secret << std::endl;
+}
+
+Contact	Phonebook::get_user(int i)
+{
+	return (Phonebook::users[i]);
 }

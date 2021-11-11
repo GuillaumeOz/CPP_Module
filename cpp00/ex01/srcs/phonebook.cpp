@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:21:54 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/10 20:17:07 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/11 20:43:24 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static void	search(Phonebook *users, int total_inst)
 
 int	main()
 {
-	Phonebook	users[8];
+	Phonebook	phonebook;
 	std::string	input;
 	int			i;
 	int			j;
@@ -85,7 +85,7 @@ int	main()
 		}
 		if (input.compare("ADD") == 0)
 		{
-			users[j].add(j);
+			phonebook.users[j].add(j);
 			phonebook_usage();
 			i++;
 			j = i % 8;
