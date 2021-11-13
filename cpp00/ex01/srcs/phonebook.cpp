@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:21:54 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/11 20:43:24 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/13 20:27:23 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	phonebook_usage(void)
 	std::cout << "\e[32mSEARCH\e[37m - Search a user into Phonebook" << std::endl;
 }
 
-static void	search(Phonebook *users, int total_inst)
+static void	search(Phonebook phonebook, int total_inst)
 {
 	std::string	input;
 	int			i;
@@ -44,7 +44,7 @@ static void	search(Phonebook *users, int total_inst)
 		total_inst = 8;
 	while (i < total_inst)
 	{
-		(users[i]).search_users();
+		phonebook.get_user(i).search_users();
 		i++;
 	}
 	std::cout << "Choose the index you want to display the contact details" << std::endl;
@@ -52,7 +52,7 @@ static void	search(Phonebook *users, int total_inst)
 	std::getline(std::cin, input);
 	if (input.length() == 1 && (input[0] >= '0' && input[0] <= ('0' + total_inst - 1)))
 	{
-		(users[input[0] - '0']).search_user();
+		phonebook.get_user(input[0] - '0').search_user();
 		phonebook_usage();
 	}
 	else
@@ -85,13 +85,13 @@ int	main()
 		}
 		if (input.compare("ADD") == 0)
 		{
-			phonebook.users[j].add(j);
+			phonebook.get_user(i).add(j);
 			phonebook_usage();
 			i++;
 			j = i % 8;
 		}
 		else if (input.compare("SEARCH") == 0)
-			search(users, i);
+			search(Phonebook::cou, i);//TO DO
 		else
 			std::cout << "Please choose between : \"EXIT\",\"ADD\" or \"SEARCH\"" << std::endl;
 	}
