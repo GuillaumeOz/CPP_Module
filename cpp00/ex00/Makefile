@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/11/05 20:18:42 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/11/14 16:23:42 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	a.out
+NAME		=	megaphone
 
 CC			=	clang++
 
@@ -26,7 +26,7 @@ OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 
 # Compilation flags
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I $(dir))
 
@@ -55,7 +55,7 @@ show:
 
 $(NAME): $(OBJ)
 	@echo "-----\nCreating Binary File $(_YELLOW)$@$(_WHITE) ... \c"
-	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME) -lreadline
+	@$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
 $(OBJ_DIR)/%.o : %.cpp
