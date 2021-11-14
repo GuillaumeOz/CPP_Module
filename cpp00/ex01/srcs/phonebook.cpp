@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 20:21:54 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/13 20:27:23 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/14 12:35:40 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	phonebook_usage(void)
 	std::cout << "\e[32mSEARCH\e[37m - Search a user into Phonebook" << std::endl;
 }
 
-static void	search(Phonebook phonebook, int total_inst)
+static void	search(Contact *contact, int total_inst)
 {
 	std::string	input;
 	int			i;
@@ -44,7 +44,7 @@ static void	search(Phonebook phonebook, int total_inst)
 		total_inst = 8;
 	while (i < total_inst)
 	{
-		phonebook.get_user(i).search_users();
+		contact[i].search_users();
 		i++;
 	}
 	std::cout << "Choose the index you want to display the contact details" << std::endl;
@@ -52,7 +52,7 @@ static void	search(Phonebook phonebook, int total_inst)
 	std::getline(std::cin, input);
 	if (input.length() == 1 && (input[0] >= '0' && input[0] <= ('0' + total_inst - 1)))
 	{
-		phonebook.get_user(input[0] - '0').search_user();
+		contact[input[0] - '0'].search_user();
 		phonebook_usage();
 	}
 	else
@@ -65,6 +65,7 @@ static void	search(Phonebook phonebook, int total_inst)
 int	main()
 {
 	Phonebook	phonebook;
+	Contact		*p_contact = NULL;
 	std::string	input;
 	int			i;
 	int			j;
@@ -85,13 +86,14 @@ int	main()
 		}
 		if (input.compare("ADD") == 0)
 		{
-			phonebook.get_user(i).add(j);
+			p_contact = phonebook.get_user(i % 8);
+			(*p_contact).add(j);
 			phonebook_usage();
 			i++;
 			j = i % 8;
 		}
 		else if (input.compare("SEARCH") == 0)
-			search(Phonebook::cou, i);//TO DO
+			search(Phonebook::users, i);
 		else
 			std::cout << "Please choose between : \"EXIT\",\"ADD\" or \"SEARCH\"" << std::endl;
 	}
