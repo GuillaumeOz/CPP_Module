@@ -6,7 +6,7 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/11/14 16:23:42 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/11/14 17:25:48 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,4 +76,4 @@ fclean:	clean
 	@rm -f $(NAME)
 	@echo "$(_GREEN)DONE$(_WHITE)\n-----"
 
-.PHONY: all re clean flcean
+.PHONY: all show re clean flcean
