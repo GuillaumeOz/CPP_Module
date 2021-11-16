@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   ClassReplace.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/15 20:22:15 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/16 15:40:03 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/16 18:17:46 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/16 20:17:32 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#ifndef CLASSREPLACE_H
+# define CLASSREPLACE_H
 
-HumanA::HumanA(std::string name, Weapon &type) : _name(name), _type(type)
+class Replace
 {
-	return ;
-}
+	Replace::Replace();
+	Replace::~Replace();
 
-HumanA::~HumanA()
-{
-	return ;
-}
+	// init_file();
+	// replace_file();
+	// close_file();
+};
 
-std::string		HumanA::getName()	const
-{
-	return (this->_name);
-}
-
-Weapon	const	&HumanA::getType()	const
-{
-	return (this->_type);
-}
-
-void			HumanA::attack()
-{
-	std::cout << this->_name << " attacks with his ";
-	std::cout << this->_type.getType() << std::endl;
-}
+#endif

@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/11/16 15:39:32 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/11/16 17:56:09 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	zombie_ptr_ref
+NAME		=	replace
 
 CC			=	c++
 

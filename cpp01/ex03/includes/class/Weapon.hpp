@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 19:58:32 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/15 20:39:27 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/16 17:26:39 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,18 @@
 class Weapon
 {
 	public:
-	
-	Weapon();
+
+	Weapon(std::string type);
 	~Weapon();
 
-	std::string type;
+	std::string	const	&getType() const;
 
-	std::string	&getType();
-	void		setType(std::string type);
+	bool				setType(std::string const &type);
 
+	private :
+	
+	std::string _type;
+	
 };
 
 
