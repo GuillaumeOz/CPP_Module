@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   replace.hpp                                        :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 18:03:20 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/17 16:57:15 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/17 17:06:00 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/17 19:55:45 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef REPLACE_HPP
-# define REPLACE_HPP
+#include "Karen.hpp"
 
-# include <iostream>
-# include <fstream>
-# include <sstream>
-# include "ClassReplace.hpp"
+int main(int argc, char **argv)
+{
+	Karen	karen;
 
-#endif
+	if (argc != 2)
+	{
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		return (0);
+	}
+	karen.complain(argv[1]);
+	return (0);
+}
