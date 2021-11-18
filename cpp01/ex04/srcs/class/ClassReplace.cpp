@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 20:13:47 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/17 16:57:28 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/18 12:26:02 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void	Replace::replace_file(std::string filename, std::string s1, std::string s2)
 				pos += s1_len;
 			}
 		}
-		ofs << line;
+		ofs << line << std::endl;
 	}
 	ifs.close();
 	ofs.close();
