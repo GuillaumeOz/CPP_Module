@@ -6,31 +6,25 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 19:35:23 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/20 20:27:09 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/21 04:19:07 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include "Point.hpp"
 #include <iostream>
 #include <cmath>
 
 int main(void)
 {
-	Fixed a;
-	Fixed const b(10);
-	Fixed const c(42.42f);
-	Fixed const d(b);
+	Point a(Fixed(0), Fixed(0));
+	Point b(Fixed(0), Fixed(10));
+	Point c(Fixed(10), Fixed(0));
+	Point point(Fixed(1), Fixed(0.5f));
 
-	a = Fixed(1234.4321f);
-
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-
-	return 0;
+	if (bsp(a, b, c, point) == true)
+		std::cout << "In" << std::endl;
+	else
+		std::cout << "Out" << std::endl;
+	return (0);
 }

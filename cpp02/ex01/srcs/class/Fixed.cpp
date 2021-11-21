@@ -6,15 +6,20 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 19:31:24 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/19 20:59:10 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/20 21:36:57 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
-#include <cmath> //roundf()
+#include <cmath>
 
-int Fixed::_nb_fractional_bits = 30;
+/*
+**	https://inst.eecs.berkeley.edu//~cs61c/sp06/handout/fixedpt.html
+**	note : pow(2, this->_fixed_point) = <binary>100000000 = 256
+*/
+
+int Fixed::_nb_fractional_bits = 8;
 
 Fixed::Fixed(void)
 {
@@ -23,17 +28,25 @@ Fixed::Fixed(void)
 	return ;
 }
 
+Fixed::Fixed(const int value)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->_fixed_point = value << this->_nb_fractional_bits;
+	return;
+}
+
+Fixed::Fixed(const float value)
+{
+	int power = 256;
+	std::cout << "Float constructor called" << std::endl;
+	this->_fixed_point = roundf(value * power);
+	return;
+}
+
 Fixed::Fixed(Fixed const &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
-	return ;
-}
-
-Fixed::Fixed( const int value )
-{
-	std::cout << "Constant integer constructor called" << std::endl;
-	this->_fixed_point = value << this->_nb_fractional_bits;
 	return;
 }
 
@@ -47,22 +60,11 @@ Fixed	&Fixed::operator=(Fixed const &right_hand_side)
 {
 	std::cout << "Assignation operator called" << std::endl;
 	if (this != &right_hand_side)
-	{
-		if (getRawBits() != right_hand_side._fixed_point)
 			this->_fixed_point = right_hand_side._fixed_point;
-	}
 	return *this;
 }
 
-// float	Fixed::toFloat( void ) const
-// {
-// 	int		power = pow(2, this->_nb_fractional_bits);
-// 	float	result = (float)this->_fixed_point / power;
-
-// 	return (result);
-// }
-
-std::ostream &	operator<<( std::ostream & ostr, Fixed const & instance)
+std::ostream	&operator<<(std::ostream & ostr, Fixed const & instance)
 {
 	ostr << instance.toFloat();
 	return (ostr);
@@ -79,14 +81,14 @@ void	Fixed::setRawBits(int const raw)
 	this->_fixed_point = raw;
 }
 
-int	Fixed::toInt( void ) const
+int		Fixed::toInt( void ) const
 {
 	return (this->_fixed_point >> this->_nb_fractional_bits);
 }
 
 float	Fixed::toFloat( void ) const
 {
-	int		power = pow(2, this->_nb_fractional_bits);
+	int		power = 256;
 	float	result = (float)this->_fixed_point / power;
 
 	return (result);
