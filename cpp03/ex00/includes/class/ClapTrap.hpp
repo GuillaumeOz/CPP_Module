@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 02:18:55 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/25 15:06:20 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/25 14:49:22 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/25 19:40:37 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-# define POINT_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
-#include "Fixed.hpp"
+#include <iostream>
 
-class Point
+class ClapTrap
 {
 	public :
 
-	Point(void);
-	Point(Fixed const x, Fixed const y);
-	Point(Point const &point);
-	~Point(void);
+	ClapTrap(std::string const &name);
+	ClapTrap(ClapTrap const &cpy);
+	~ClapTrap();
 
-	Point	&operator=(Point const &right_hand_side);
+	ClapTrap	&operator=(ClapTrap const &right_hand_side);
 
-	float	getX(void);
-	float	getY(void);
+	void		attack(std::string const & target);
+	void		takeDamage(unsigned int amount);
+	void		beRepaired(unsigned int amount);
 
 	private :
 
-	Fixed const _x;
-	Fixed const _y;
-};
+	std::string _name;
+	int			_Hitpoints;
+	int			_Energy_points;
+	int			_Attack_damage;
 
-bool bsp( Point const a, Point const b, Point const c, Point const point);
+};
 
 #endif

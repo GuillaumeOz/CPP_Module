@@ -1,40 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/21 02:18:55 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/25 15:06:20 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/25 14:50:12 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/25 19:41:15 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-# define POINT_HPP
+#include "ClapTrap.hpp"
 
-#include "Fixed.hpp"
-
-class Point
+int	main()
 {
-	public :
+	ClapTrap clapTrap1("Clap[11-Ox-02]");
+	ClapTrap clapTrap2("Clap[22-Jy-14]");
 
-	Point(void);
-	Point(Fixed const x, Fixed const y);
-	Point(Point const &point);
-	~Point(void);
+	clapTrap1.attack("Clap[22-Jy-14]");
+	clapTrap2.attack("Clap[11-Ox-02]");
 
-	Point	&operator=(Point const &right_hand_side);
+	clapTrap1.takeDamage(5);
+	clapTrap2.takeDamage(7);
+	
+	clapTrap1.beRepaired(5);
+	clapTrap2.beRepaired(7);
 
-	float	getX(void);
-	float	getY(void);
-
-	private :
-
-	Fixed const _x;
-	Fixed const _y;
-};
-
-bool bsp( Point const a, Point const b, Point const c, Point const point);
-
-#endif
+	return (0);
+}

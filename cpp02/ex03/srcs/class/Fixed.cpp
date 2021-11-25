@@ -6,15 +6,13 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 19:31:24 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/21 04:18:53 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/25 15:06:39 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
 #include <cmath>
-
-#define PRINT(x) std::cout << x << std::endl;
 
 int Fixed::_nb_fractional_bits = 8;
 
