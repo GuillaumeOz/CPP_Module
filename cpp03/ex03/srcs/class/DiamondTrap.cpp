@@ -6,30 +6,11 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:39:31 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:42:13 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/26 21:48:06 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
-
-// • Name (Parameter of constructor)
-// • Claptrap::Name (Parameter of constructor + "_clap_name")
-// • Hitpoints (Fragtrap)
-// • Energy points (Scavtrap)
-// • Attack damage (Fragtrap)
-// • attack (Scavtrap)
-
-// std::string	_name;
-// int			_Hitpoints;
-// int			_Energy_points;
-// int			_Attack_damage;
-
-// Name (Parameter of constructor)
-// • Claptrap::Name (Parameter of constructor + "_clap_name")
-// • Hitpoints (Fragtrap)
-// • Energy points (Scavtrap)
-// • Attack damage (Fragtrap)
-// • attack (Scavtrap)
 
 DiamondTrap::DiamondTrap(void)
 {
