@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:49:22 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:46:02 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/26 21:29:12 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ class ClapTrap
 
 	ClapTrap	&operator=(ClapTrap const &right_hand_side);
 
-	void		attack(std::string const & target);
+	void		attack(std::string const &target);
 	void		takeDamage(unsigned int amount);
 	void		beRepaired(unsigned int amount);
 
-	private :
+	protected :
 
 	std::string _name;
 	int			_Hitpoints;

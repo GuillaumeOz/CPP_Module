@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 14:49:22 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:46:02 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/26 18:39:01 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/26 21:21:54 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ClapTrap
+class DiamondTrap : public FragTrap, public ScavTrap
 {
 	public :
 
-	ClapTrap(void);
-	ClapTrap(std::string const &name);
-	ClapTrap(ClapTrap const &cpy);
-	~ClapTrap();
+	DiamondTrap(void);
+	DiamondTrap(std::string const &name);
+	DiamondTrap(DiamondTrap const &cpy);
+	~DiamondTrap();
 
-	ClapTrap	&operator=(ClapTrap const &right_hand_side);
+	DiamondTrap	&operator=(DiamondTrap const &right_hand_side);
 
-	void		attack(std::string const & target);
-	void		takeDamage(unsigned int amount);
-	void		beRepaired(unsigned int amount);
+	void	whoAmI();
+	void	attack(std::string const &target);
 
-	private :
+	protected:
 
 	std::string _name;
-	int			_Hitpoints;
-	int			_Energy_points;
-	int			_Attack_damage;
 
 };
+
 
 #endif
