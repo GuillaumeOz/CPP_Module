@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:44:59 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:12:02 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:35:34 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ ScavTrap::ScavTrap(void)
 	this->_name = "Unknown";
 	this->_Hitpoints = 100;
 	this->_Energy_points = 50;
+	this->_Initial_Energy_points = 50;
 	this->_Attack_damage = 20;
 	std::cout << "ScavTrap " << this->_name << " has been created" << std::endl;
 	return ;
@@ -27,6 +28,7 @@ ScavTrap::ScavTrap(std::string const &name)
 	this->_name = name;
 	this->_Hitpoints = 100;
 	this->_Energy_points = 50;
+	this->_Initial_Energy_points = 50;
 	this->_Attack_damage = 20;
 	std::cout << "ScavTrap " << this->_name << " has been created" << std::endl;
 	return ;

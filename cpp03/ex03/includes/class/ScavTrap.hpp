@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 19:42:46 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:19:24 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:34:57 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ class ScavTrap : virtual public ClapTrap
 	ScavTrap	&operator=(ScavTrap const &right_hand_side);
 
 	void guardGate();
+
+	protected :
+
+	int		_Initial_Energy_points;
 };
 
 #endif

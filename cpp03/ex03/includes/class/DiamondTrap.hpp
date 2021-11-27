@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:39:01 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:21:54 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:21:06 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	protected:
 
 	std::string _name;
-
 };
 
 

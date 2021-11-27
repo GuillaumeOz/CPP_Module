@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:39:31 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:48:06 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:47:24 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 DiamondTrap::DiamondTrap(void)
 {
-	this->_name = "Unknown_clap_name";
-	this->_Hitpoints = FragTrap::_Hitpoints;
-	this->_Energy_points = ScavTrap::_Energy_points;
-	this->_Attack_damage = FragTrap::_Attack_damage;
-	std::cout << "DiamondTrap " << "Unknown" << " has been created" << std::endl;
+	this->_name = "Unknown";
+	this->_Hitpoints = FragTrap::_Initial_Hitpoints;
+	this->_Energy_points = ScavTrap::_Initial_Energy_points;
+	this->_Attack_damage = FragTrap::_Initial_Attack_damage;
+	std::cout << "DiamondTrap Unknown has been created" << std::endl;
 	return ;
 }
 
@@ -26,9 +26,9 @@ DiamondTrap::DiamondTrap(std::string const &name)
 {
 	ClapTrap::_name = name + "_clap_name";
 	this->_name = name;
-	this->_Hitpoints = FragTrap::_Hitpoints;
-	this->_Energy_points = ScavTrap::_Energy_points;
-	this->_Attack_damage = FragTrap::_Attack_damage;
+	this->_Hitpoints = FragTrap::_Initial_Hitpoints;
+	this->_Energy_points = ScavTrap::_Initial_Energy_points;
+	this->_Attack_damage = FragTrap::_Initial_Attack_damage;
 	std::cout << "DiamondTrap " << this->_name << " has been created" << std::endl;
 	return ;
 }
@@ -68,5 +68,5 @@ void		DiamondTrap::attack(std::string const &target)
 void		DiamondTrap::whoAmI()
 {
 	std::cout << "DiamondTrap introduces himself :" << std::endl;
-	std::cout << "My name is : " << this->_name << " son of " << ClapTrap::_name << std::endl;
+	std::cout << "My name is : " << this->_name << " and my clap name is : " << ClapTrap::_name << std::endl;
 }

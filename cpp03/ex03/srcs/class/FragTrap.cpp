@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 18:17:07 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/26 21:11:50 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/27 13:36:01 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ FragTrap::FragTrap()
 {
 	this->_name = "Unknown";
 	this->_Hitpoints = 100;
+	this->_Initial_Hitpoints = 100;
 	this->_Energy_points = 100;
 	this->_Attack_damage = 30;
+	this->_Initial_Attack_damage = 30;
 	std::cout << "FragTrap " << this->_name << " has been created" << std::endl;
 	return ;
 }
@@ -26,8 +28,10 @@ FragTrap::FragTrap(std::string const &name)
 {
 	this->_name = name;
 	this->_Hitpoints = 100;
+	this->_Initial_Hitpoints = 100;
 	this->_Energy_points = 100;
 	this->_Attack_damage = 30;
+	this->_Initial_Attack_damage = 30;
 	std::cout << "FragTrap " << this->_name << " has been created" << std::endl;
 	return ;
 }
