@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/11/27 15:15:56 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/11/30 14:26:36 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	diamondtrap
+NAME		=	animalNoise
 
 CC			=	c++
 
@@ -26,7 +26,7 @@ OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 
 # Compilation flags
 
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98# -Wshadow -Wno-shadow
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -Wshadow -Wno-shadow
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I $(dir))
 
