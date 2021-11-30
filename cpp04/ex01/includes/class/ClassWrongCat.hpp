@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassDog.hpp                                       :+:      :+:    :+:   */
+/*   ClassWrongCat.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 12:24:00 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:33:26 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/30 12:26:49 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/30 14:45:15 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSDOG_HPP
-# define CLASSDOG_HPP
+#ifndef CLASSWRONGCAT_HPP
+# define CLASSWRONGCAT_HPP
 
-class Dog : virtual public Animal {
+class WrongCat : virtual public WrongAnimal{
 
 	public:
 
 		// Constructors and destructor
-		Dog(void);
-		Dog(const Dog &src);
-		virtual ~Dog();
+		WrongCat(void);
+		WrongCat(const WrongCat &src);
+		virtual ~WrongCat();
 
 		// Operator overloads
-		Dog&	operator=(const Dog &rhs);
+		WrongCat&	operator=(const WrongCat &rhs);
 
 		// Getters / Setters
 
 		// Member functions
-		virtual void	makeSound(void) const ;
+		void	makeSound(void) const ;
 };
 
 #endif

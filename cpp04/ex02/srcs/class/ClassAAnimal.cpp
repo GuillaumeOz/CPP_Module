@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassDog.hpp                                       :+:      :+:    :+:   */
+/*   ClassAAnimal.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 12:24:00 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:33:26 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/30 11:50:03 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/30 21:45:58 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSDOG_HPP
-# define CLASSDOG_HPP
+#include "AnimalPurify.hpp"
 
-class Dog : virtual public Animal {
+AAnimal::~AAnimal(void) {
 
-	public:
+	std::cout << "Destructor for AAnimal called" << std::endl;
+	return;
+}
 
-		// Constructors and destructor
-		Dog(void);
-		Dog(const Dog &src);
-		virtual ~Dog();
+AAnimal&	AAnimal::operator=(const AAnimal &rhs) {
 
-		// Operator overloads
-		Dog&	operator=(const Dog &rhs);
+	this->type = rhs.type;
+	return (*this);
+}
 
-		// Getters / Setters
-
-		// Member functions
-		virtual void	makeSound(void) const ;
-};
-
-#endif
+const std::string	&AAnimal::getType(void) const
+{
+	return (this->type);
+}

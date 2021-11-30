@@ -6,38 +6,45 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 15:21:22 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:59:59 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:27:56 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AnimalBrain.hpp"
 
 int main()
 {
-	const Animal* meta = new Animal();
+	const Animal* animalHorde[6];
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
+	Brain*	brain;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	std::cout << std::endl;
 
-	delete meta;
-	delete j;
+	for (int i = 0; i < 6; i++)
+	{
+		if ((i % 2) == 0)
+			animalHorde[i] = new Cat();
+		else
+			animalHorde[i] = new Dog();
+	}
+	for (int i = 0; i < 6; i++)
+		std::cout << i << " " << animalHorde[i]->getType() << std::endl;
+
+	std::cout << std::endl;
+	
+	brain = animalHorde[0]->getBrain();
+	brain->ideas[0] = "I'm so ussless...";
+	std::cout << animalHorde[0]->getType() << " think : " << brain->ideas[0] << std::endl;
+	brain = animalHorde[1]->getBrain();
+	brain->ideas[0] = "I'm so usefull !";
+	std::cout << animalHorde[1]->getType() << " think : " << brain->ideas[0] << std::endl;
+
+	std::cout << std::endl;
+
+	delete j;//should not create a leak
 	delete i;
-
-//	WrongAnimal test
-
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* k = new WrongCat();
-
-	std::cout << k->getType() << " " << std::endl;
-	k->makeSound(); //will output the WrongAnimal sound!
-	wrongMeta->makeSound();
-
-	delete wrongMeta;
-	delete k;
+	for (int i = 0; i < 6; i++)
+		delete animalHorde[i];
 	return (0);
 }

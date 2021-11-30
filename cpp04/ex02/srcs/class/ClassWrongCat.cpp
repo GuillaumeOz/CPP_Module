@@ -6,11 +6,11 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:21:23 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:50:50 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:21:53 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AnimalPurify.hpp"
 
 WrongCat::WrongCat(void) {
 

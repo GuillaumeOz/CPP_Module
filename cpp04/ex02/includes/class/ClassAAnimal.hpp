@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassDog.hpp                                       :+:      :+:    :+:   */
+/*   ClassAAnimal.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 12:24:00 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:33:26 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/30 11:32:22 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/30 21:44:32 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSDOG_HPP
-# define CLASSDOG_HPP
+#ifndef CLASSAANIMAL_HPP
+# define CLASSAANIMAL_HPP
 
-class Dog : virtual public Animal {
+class AAnimal {
 
 	public:
 
-		// Constructors and destructor
-		Dog(void);
-		Dog(const Dog &src);
-		virtual ~Dog();
+		virtual ~AAnimal(void);
+		virtual AAnimal&	operator=(const AAnimal &rhs);
+		virtual const std::string	&getType(void) const ;
+		virtual Brain		*getBrain(void) const = 0;
+		virtual void		makeSound(void) const = 0;
 
-		// Operator overloads
-		Dog&	operator=(const Dog &rhs);
+	protected:
 
-		// Getters / Setters
+	std::string type;
 
-		// Member functions
-		virtual void	makeSound(void) const ;
 };
 
 #endif

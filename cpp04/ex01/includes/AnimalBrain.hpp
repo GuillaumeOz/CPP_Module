@@ -1,34 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassDog.hpp                                       :+:      :+:    :+:   */
+/*   AnimalBrain.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 12:24:00 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:33:26 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/11/30 11:19:50 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/11/30 21:28:02 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASSDOG_HPP
-# define CLASSDOG_HPP
+#ifndef ANIMALBRAIN_HPP
+# define ANIMALBRAIN_HPP
 
-class Dog : virtual public Animal {
+#include <iostream>
 
-	public:
-
-		// Constructors and destructor
-		Dog(void);
-		Dog(const Dog &src);
-		virtual ~Dog();
-
-		// Operator overloads
-		Dog&	operator=(const Dog &rhs);
-
-		// Getters / Setters
-
-		// Member functions
-		virtual void	makeSound(void) const ;
-};
+#include "ClassBrain.hpp"
+#include "ClassAnimal.hpp"
+#include "ClassCat.hpp"
+#include "ClassDog.hpp"
+#include "ClassWrongAnimal.hpp"
+#include "ClassWrongCat.hpp"
 
 #endif

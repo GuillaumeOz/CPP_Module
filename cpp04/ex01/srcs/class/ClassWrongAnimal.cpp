@@ -6,11 +6,11 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 14:08:22 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/11/30 16:50:41 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/11/30 21:27:50 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AnimalBrain.hpp"
 
 WrongAnimal::WrongAnimal(void) {
 
