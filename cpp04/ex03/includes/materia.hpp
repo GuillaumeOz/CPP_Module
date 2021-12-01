@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAAnimal.cpp                                   :+:      :+:    :+:   */
+/*   materia.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 11:50:03 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 16:09:54 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/01 15:46:57 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/01 18:43:02 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AnimalPurify.hpp"
+#ifndef MATERIA_HPP
+# define MATERIA_HPP
 
-AAnimal::~AAnimal(void) {
+#include <iostream>
 
-	std::cout << "Destructor for AAnimal called" << std::endl;
-	return;
-}
+#include "ClassIMateriaSource.hpp"
+#include "ClassICharacter.hpp"
+#include "ClassAMateria.hpp"
+#include "ClassMateriaSource.hpp"
+#include "ClassCharacter.hpp"
 
-const std::string	&AAnimal::getType(void) const
-{
-	return (this->type);
-}
+#endif

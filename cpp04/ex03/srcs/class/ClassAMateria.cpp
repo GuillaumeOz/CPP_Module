@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAAnimal.cpp                                   :+:      :+:    :+:   */
+/*   ClassAMateria.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 11:50:03 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 16:09:54 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/01 20:07:28 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/01 20:07:48 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AnimalPurify.hpp"
+#include "materia.hpp"
 
-AAnimal::~AAnimal(void) {
+AMateria::AMateria(void) {
 
-	std::cout << "Destructor for AAnimal called" << std::endl;
-	return;
+
+	return ;
 }
 
-const std::string	&AAnimal::getType(void) const
-{
-	return (this->type);
+AMateria::AMateria(const AMateria &AMateria) {
+
+
+	return ;
+}
+
+AMateria::~AMateria(void) {
+
+
+	return ;
+}
+
+AMateria	&AMateria::operator=(const AMateria &rhs) {
+
+
+	return (*this);
 }

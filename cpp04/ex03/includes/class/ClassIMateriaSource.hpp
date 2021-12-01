@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAAnimal.cpp                                   :+:      :+:    :+:   */
+/*   ClassIMateriaSource.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 11:50:03 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 16:09:54 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/01 15:53:50 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/01 20:01:31 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AnimalPurify.hpp"
+#ifndef CLASSIMATERIASOURCE_HPP
+# define CLASSIMATERIASOURCE_HPP
 
-AAnimal::~AAnimal(void) {
-
-	std::cout << "Destructor for AAnimal called" << std::endl;
-	return;
-}
-
-const std::string	&AAnimal::getType(void) const
+class IMateriaSource
 {
-	return (this->type);
-}
+	public:
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
+};
+
+#endif

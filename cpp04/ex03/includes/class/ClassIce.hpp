@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClassAAnimal.cpp                                   :+:      :+:    :+:   */
+/*   ClassIce.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/30 11:50:03 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 16:09:54 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/01 18:21:50 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/01 18:39:07 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AnimalPurify.hpp"
+#ifndef CLASSICE_HPP
+# define CLASSICE_HPP
 
-AAnimal::~AAnimal(void) {
 
-	std::cout << "Destructor for AAnimal called" << std::endl;
-	return;
-}
 
-const std::string	&AAnimal::getType(void) const
-{
-	return (this->type);
-}
+#endif
