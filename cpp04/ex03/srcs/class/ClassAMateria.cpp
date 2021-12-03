@@ -6,32 +6,30 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 20:07:28 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 20:07:48 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/03 21:14:12 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "materia.hpp"
 
-AMateria::AMateria(void) {
+AMateria::AMateria(const std::string &type) {
 
+	std::cout << "Name AMateria constructor called" << std::endl;
+	this->_type = type;
+	return ;
+}
+
+AMateria::~AMateria(){
 
 	return ;
 }
 
-AMateria::AMateria(const AMateria &AMateria) {
+std::string const & AMateria::getType() const {
 
-
-	return ;
+	return(this->_type);
 }
 
-AMateria::~AMateria(void) {
-
-
-	return ;
-}
-
-AMateria	&AMateria::operator=(const AMateria &rhs) {
-
-
-	return (*this);
+void	AMateria::use(ICharacter& target)
+{
+	std::cout << "* Prepares to use a materia on" << target.getName() << std::endl;
 }

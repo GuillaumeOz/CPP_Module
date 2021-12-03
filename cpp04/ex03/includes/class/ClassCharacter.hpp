@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 18:38:50 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/01 19:26:38 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/03 16:14:51 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,15 @@ class Character : virtual public ICharacter {
 
 		// Member functions
 		void equip(AMateria* m);
+		void unequip(int idx);
+		void use(int idx, ICharacter& target);
 
-	protected:
+	//print inventory
+
+	private:
 	
-		std::string		name;
-		AMateria		*inventory;
+		std::string		_name;
+		AMateria		*_inventory[4];
 
 };
 
