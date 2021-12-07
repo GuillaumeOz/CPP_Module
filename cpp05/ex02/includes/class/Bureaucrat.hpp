@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 14:44:50 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/07 16:39:38 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:32:37 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include <iostream>
 #include <cstdlib>
+
+class Form;
 
 class Bureaucrat {
 
@@ -41,6 +43,8 @@ class Bureaucrat {
 
 		void		IncrementGrade(void);
 		void		DecrementGrade(void);
+
+		bool		signForm(Form Form);
 
 	private:
 

@@ -1,54 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/06 14:44:50 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/07 16:39:38 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/07 15:07:24 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/07 17:11:41 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-# define BUREAUCRAT_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+# define ROBOTOMYREQUESTFORM_HPP
 
 #include <iostream>
 #include <cstdlib>
+#include "Form.hpp"
+#include "Bureaucrat.hpp"
 
-class Bureaucrat {
+class RobotomyRequestForm : public Form {
 
 	public:
 
 		// Constructors and destructor
-		Bureaucrat(void);
-		Bureaucrat(std::string name, int grade);
-		Bureaucrat(const Bureaucrat &src);
-		virtual ~Bureaucrat();
+		RobotomyRequestForm(void);
+		RobotomyRequestForm(std::string target);
+		RobotomyRequestForm(const RobotomyRequestForm &src);
+		virtual ~RobotomyRequestForm();
 
 		// Operator overloads
-		Bureaucrat&	operator=(const Bureaucrat &rhs);
+		RobotomyRequestForm&	operator=(const RobotomyRequestForm &rhs);
 
 		// Getters / Setters
 
-		std::string	getName(void) const;
-		int			getGrade(void) const;
-
 		// Member functions
-
-		bool		GradeTooHighException(int grade);
-		bool		GradeTooLowException(int grade);
-
-		void		IncrementGrade(void);
-		void		DecrementGrade(void);
+		virtual void		execute(const Bureaucrat &executor) const;
 
 	private:
 
-	std::string	const	_name;
-	int					_grade;
+	std::string			_target;
+	int const			_signedGrade;
+	int const			_execGrade;
 
 };
-
-std::ostream	&operator<<(std::ostream &ostr, Bureaucrat const &Bureaucrat);
 
 #endif

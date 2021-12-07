@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 19:30:00 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/07 16:39:05 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:33:03 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,12 @@ void	Form::checkGrade(void) const {
 	{
 		std::cout << e.what() << std::endl;
 	}
+}
+
+void	Form::checkIfExec(const Bureaucrat &executor) const
+{
+	if (this->_signed == false || executor.getGrade() > this->_execGrade)
+		throw Form::CannotExecute();
 }
 
 void	Form::beSigned(Bureaucrat const &Bureaucrat) {

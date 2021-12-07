@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 15:00:48 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/06 19:01:00 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/07 16:39:05 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@ int main()
 {
 	std::cout << "---------TEST1-----------" << std::endl;
 
-	BureauCrat bureauCratA("Bob", 1);
-	BureauCrat bureauCratB("John", 150);
-	BureauCrat bureauCratC("Zak", 0);
-	BureauCrat bureauCratD("Max", 151);
+	Bureaucrat BureaucratA("Bob", 1);
+	Bureaucrat BureaucratB("John", 150);
+	Bureaucrat BureaucratC("Zak", 0);
+	Bureaucrat BureaucratD("Max", 151);
 
 	std::cout << "---------TEST2-----------" << std::endl;
 
-	bureauCratA.IncrementGrade();
-	std::cout << bureauCratA.getGrade() << std::endl;
-	bureauCratB.DecrementGrade();
-	std::cout << bureauCratB.getGrade() << std::endl;
+	BureaucratA.IncrementGrade();
+	std::cout << BureaucratA.getGrade() << std::endl;
+	BureaucratB.DecrementGrade();
+	std::cout << BureaucratB.getGrade() << std::endl;
 
 	std::cout << "---------TEST3-----------" << std::endl;
 
-	bureauCratA.DecrementGrade();
-	std::cout << bureauCratA.getGrade() << std::endl;
-	bureauCratB.IncrementGrade();
-	std::cout << bureauCratB.getGrade() << std::endl;
+	BureaucratA.DecrementGrade();
+	std::cout << BureaucratA.getGrade() << std::endl;
+	BureaucratB.IncrementGrade();
+	std::cout << BureaucratB.getGrade() << std::endl;
 
 	std::cout << "---------TEST4-----------" << std::endl;
 
-	std::cout << bureauCratA;
+	std::cout << BureaucratA;
 	return (0);
 }

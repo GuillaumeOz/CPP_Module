@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/12/07 16:39:05 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/12/07 16:52:13 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	BureaucratForm
+NAME		=	BureaucratFormType
 
 CC			=	clang++
 

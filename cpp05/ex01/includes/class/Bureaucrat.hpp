@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 14:44:50 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/06 21:00:23 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:24:48 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,20 @@
 #include <iostream>
 #include <cstdlib>
 
-class BureauCrat {
+class Form;
+
+class Bureaucrat {
 
 	public:
 
 		// Constructors and destructor
-		BureauCrat(void);
-		BureauCrat(std::string name, int grade);
-		BureauCrat(const BureauCrat &src);
-		virtual ~BureauCrat();
+		Bureaucrat(void);
+		Bureaucrat(std::string name, int grade);
+		Bureaucrat(const Bureaucrat &src);
+		virtual ~Bureaucrat();
 
 		// Operator overloads
-		BureauCrat&	operator=(const BureauCrat &rhs);
+		Bureaucrat&	operator=(const Bureaucrat &rhs);
 
 		// Getters / Setters
 
@@ -42,6 +44,8 @@ class BureauCrat {
 		void		IncrementGrade(void);
 		void		DecrementGrade(void);
 
+		bool		signForm(Form Form);
+
 	private:
 
 	std::string	const	_name;
@@ -49,6 +53,6 @@ class BureauCrat {
 
 };
 
-std::ostream	&operator<<(std::ostream &ostr, BureauCrat const &bureauCrat);
+std::ostream	&operator<<(std::ostream &ostr, Bureaucrat const &Bureaucrat);
 
 #endif

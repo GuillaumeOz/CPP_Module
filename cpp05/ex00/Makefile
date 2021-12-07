@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/12/06 14:44:47 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/12/07 16:39:05 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	bureaucrat
+NAME		=	Bureaucrat
 
 CC			=	clang++
 
@@ -26,7 +26,7 @@ OBJ			=	$(addprefix $(OBJ_DIR)/, $(SRC:%.cpp=%.o))
 
 # Compilation flags
 
-CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address #-Wshadow -Wno-shadow
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98 #-g3 -fsanitize=address #-Wshadow -Wno-shadow
 
 IFLAGS		=	$(foreach dir, $(INC_DIR), -I $(dir))
 

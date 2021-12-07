@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 19:03:38 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/07 16:56:20 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/07 17:09:37 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,13 @@ class Form {
 		int			getSignedGrade(void) const;
 
 		void		setSigned(bool isSigned);
-		// Member functions
 
+		// Member functions
 		void		checkGrade(void) const;
 		void		beSigned(Bureaucrat const &Bureaucrat) ;
+		void		checkIfExec(const Bureaucrat &executor) const ;
+
+		virtual void	execute (Bureaucrat const & executor) const = 0;
 
 		class GradeTooHighException : public std::exception {
 
@@ -57,6 +60,15 @@ class Form {
 				virtual const char* what() const throw() {
 					return ("The grade is too low");
 				}
+		};
+
+		class CannotExecute : public std::exception
+		{
+		public:
+			virtual const char* what() const throw()
+			{
+				return ("The form cannot be executed");
+			}
 		};
 
 	private:
