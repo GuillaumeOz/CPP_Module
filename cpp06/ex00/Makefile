@@ -6,11 +6,11 @@
 #    By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/05 16:04:03 by gozsertt          #+#    #+#              #
-#    Updated: 2021/12/09 16:01:25 by gozsertt         ###   ########.fr        #
+#    Updated: 2021/12/10 16:28:16 by gozsertt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	scalar
+NAME		=	convert
 
 CC			=	clang++
 

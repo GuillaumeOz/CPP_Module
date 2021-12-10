@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:17:46 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/09 19:20:26 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/10 18:57:32 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@
 // Pour chaque exercice, la situation doit être résolue par un cast spécifique.
 // L’évaluation vérifiera que votre choix de cast est correct.
 
-
-		// std::cout << "TEST" << std::endl;
 int main(int ac, char **av) {
 
 	if (ac != 2)
@@ -42,10 +40,19 @@ int main(int ac, char **av) {
 		std::cout << "Wrong number of arguments" << std::endl;
 		return (0);
 	}
-	Scalar scalar(av[1]);
-	scalar.printChar();
-	scalar.printInt();
-	scalar.printFloat();
-	scalar.printDouble();
+	try
+	{
+		Scalar scalar(av[1]);
+
+		scalar.printChar();
+		scalar.printInt();
+		scalar.printFloat();
+		scalar.printDouble();
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
 	return (0);
 }

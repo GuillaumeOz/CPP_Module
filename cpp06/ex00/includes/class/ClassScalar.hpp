@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:02:19 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/09 20:04:09 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/10 19:05:51 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Scalar {
 
 		// Constructors and destructor
 		Scalar(void);
-		Scalar(std::string const &value);
+		Scalar(char const *value);
 		Scalar(const Scalar &src);
 		virtual ~Scalar();
 
@@ -28,7 +28,13 @@ class Scalar {
 
 		// Getters / Setters
 
-		void	setChar(std::string const &value);
+
+		void	setEdgeCases(std::string const &value);
+		void	setChar(char const *value);
+		void	setInt(char const *value);
+		void	setFloat(char const *value);
+		void	setDouble(char const *value);
+
 		// Operator
 
 		// operator char();
@@ -37,45 +43,36 @@ class Scalar {
 		// operator double();
 
 		// Member functions
+		
+		void	inputError(void) const;
+		bool	scalarDigit(char c) const;
 
 		void	printChar(void) const ;
 		void	printInt(void) const ;
 		void	printFloat(void) const ;
 		void	printDouble(void) const ;
 
+		void	findDot(void);
 		//Error handler
-		class noInput : public std::exception {
+		class parsingError : public std::exception {
 
 			public:
 				virtual const char* what() const throw() {
-					return ("Wrong number of arguments");
-				}
+					return ("Wrong input number");
+				}//cannot use this
 		};
-
-
-	// try
-	// {
-	// 		throw Scalar::noInput();
-	// }
-	// catch (std::exception &e)
-	// {
-	// 	std::cout << e.what() << std::endl;
-	// 	return (0);
-	// }
-		// class GradeTooLowException : public std::exception {
-
-		// 	public:
-		// 		virtual const char* what() const throw() {
-		// 			return ("The grade is too low");
-		// 		}
-		// };
 
 	private:
 
-		char	_valueChar;
-		int		_valueInt;
-		float	_valueFloat;
-		double	_valueDouble;
+		char	const	*_srcValue;
+		bool			_dot;
+		bool			_onlyZero;
+		std::string		_floatEdgeCases;
+		std::string		_doubleEdgeCases;
+		char			_valueChar;
+		int				_valueInt;
+		float			_valueFloat;
+		double			_valueDouble;
 };
 
 #endif
