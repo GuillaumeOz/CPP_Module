@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scalar.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 16:29:40 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 14:45:06 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/13 16:56:42 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/13 17:36:54 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-# define SCALAR_HPP
+#include "trueType.hpp"
 
-#include <iostream>
-#include <stdlib.h>
-#include <limits>
-#include "ClassScalar.hpp"
+Base * generate(void);
 
-#endif
+int	main() {
+
+	Base *base;
+
+	base = generate();
+}

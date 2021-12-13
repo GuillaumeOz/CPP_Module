@@ -1,21 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scalar.hpp                                         :+:      :+:    :+:   */
+/*   ClassA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 16:29:40 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 14:45:06 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/13 16:33:03 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/13 17:12:30 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-# define SCALAR_HPP
+#ifndef CLASSA_HPP
+# define CLASSA_HPP
 
-#include <iostream>
-#include <stdlib.h>
-#include <limits>
-#include "ClassScalar.hpp"
+class A : public Base {
+
+	public:
+
+		// Constructors and destructor
+		A(void);
+		A(const A &src);
+		virtual ~A();
+
+		// Operator overloads
+		A&	operator=(const A &rhs);
+
+		// Getters / Setters
+
+		// Member functions
+};
 
 #endif

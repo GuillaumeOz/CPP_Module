@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scalar.hpp                                         :+:      :+:    :+:   */
+/*   StructData.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 16:29:40 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 14:45:06 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/13 15:50:15 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/13 15:53:23 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-# define SCALAR_HPP
+#include "serialization.hpp"
 
-#include <iostream>
-#include <stdlib.h>
-#include <limits>
-#include "ClassScalar.hpp"
+uintptr_t	serialize(Data *ptr)
+{
+	return (reinterpret_cast<uintptr_t>(ptr));
+}
 
-#endif
+Data	*deserialize(uintptr_t raw)
+{
+	return (reinterpret_cast<Data*>(raw));
+}

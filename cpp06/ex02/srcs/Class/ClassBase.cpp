@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Scalar.hpp                                         :+:      :+:    :+:   */
+/*   ClassBase.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 16:29:40 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 14:45:06 by gozsertt         ###   ########.fr       */
+/*   Created: 2021/12/13 17:10:50 by gozsertt          #+#    #+#             */
+/*   Updated: 2021/12/13 17:11:33 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALAR_HPP
-# define SCALAR_HPP
+#include "trueType.hpp"
 
-#include <iostream>
-#include <stdlib.h>
-#include <limits>
-#include "ClassScalar.hpp"
-
-#endif
+Base::~Base(void) {
+	
+	return ;
+}
