@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/09 16:29:06 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 15:27:34 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/13 19:06:02 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,7 +209,7 @@ void	Scalar::printFloat(void) const {
 		std::cout << "0." << this->_valueDouble << "f" << std::endl;
 	else if (this->_dot == true && this->_notOnlyZero == true)
 		std::cout << this->_valueFloat << "f" << std::endl;
-	else if (this->_valueLen > 6)
+	else if (this->_valueLen > 6 && this->_dot == false)
 		std::cout << this->_valueFloat << "f" << std::endl;
 	else
 		std::cout << this->_valueFloat << ".0f" << std::endl;
@@ -224,7 +224,7 @@ void	Scalar::printDouble(void) const {
 		std::cout << "0." << this->_valueDouble << std::endl;
 	else if (this->_dot == true && this->_notOnlyZero == true)
 		std::cout << this->_valueDouble << std::endl;
-	else if (this->_valueLen > 6)
+	else if (this->_valueLen > 6 && this->_dot == false)
 		std::cout << this->_valueFloat << std::endl;
 	else
 		std::cout << this->_valueDouble << ".0" << std::endl;

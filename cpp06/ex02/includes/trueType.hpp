@@ -6,7 +6,7 @@
 /*   By: gozsertt <gozsertt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 16:28:04 by gozsertt          #+#    #+#             */
-/*   Updated: 2021/12/13 17:29:32 by gozsertt         ###   ########.fr       */
+/*   Updated: 2021/12/13 18:48:48 by gozsertt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,9 @@
 #include "ClassA.hpp"
 #include "ClassB.hpp"
 #include "ClassC.hpp"
+
+Base * generate(void);
+void identify(Base * p);
+void identify( Base & p);
 
 #endif
